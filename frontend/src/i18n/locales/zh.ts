@@ -5384,6 +5384,31 @@ export default {
         title: '🎉 完成创建',
         description:
           '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;">点击确认创建您的 API 密钥。</p><div style="padding: 8px 12px; background: #fee2e2; border-left: 3px solid #ef4444; border-radius: 4px; font-size: 13px; margin-bottom: 12px;"><b>⚠️ 重要：</b><ul style="margin: 8px 0 0 16px;"><li>创建后请立即复制密钥（sk-xxx）</li><li>密钥只显示一次，丢失需重新生成</li></ul></div><p style="padding: 8px 12px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 4px; font-size: 13px;"><b>🚀 如何使用：</b><br/>将密钥配置到支持 OpenAI 接口的任何客户端（如 ChatBox、OpenCat 等），即可开始使用！</p><p style="margin-top: 12px; color: #10b981; font-weight: 600;">👉 点击"创建"按钮</p></div>'
+      },
+      useKey: {
+        title: '🧭 打开使用配置',
+        description:
+          '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;"><b>密钥已经创建好了。</b> 每一行都提供了一个面向真实客户端的快速接入入口。</p><div style="padding: 8px 12px; background: #eff6ff; border-left: 3px solid #3b82f6; border-radius: 4px; font-size: 13px; margin-bottom: 12px;"><b>📌 这里会帮你做什么：</b><ul style="margin: 8px 0 0 16px;"><li>自动带出正确的 Base URL</li><li>把刚生成的 API Key 直接填进示例配置</li><li>在支持的情况下切换 Claude Code、Codex、Gemini CLI、OpenCode 等客户端</li></ul></div><p style="margin-top: 12px; color: #10b981; font-weight: 600;">👉 点击这一行里的“使用密钥”按钮</p></div>'
+      },
+      modal: {
+        title: '🪟 客户端配置窗口',
+        description:
+          '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;">这个窗口会直接生成可以使用的客户端配置。</p><div style="padding: 8px 12px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 4px; font-size: 13px;"><b>💡 您不需要手动拼接接口地址、密钥或 provider 格式。</b> Sub2API 已经替您填好了。</div></div>'
+      },
+      clientTabs: {
+        title: '🧩 选择匹配的客户端',
+        description:
+          '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;">选择和您实际使用工具一致的标签页。</p><div style="padding: 8px 12px; background: #eff6ff; border-left: 3px solid #3b82f6; border-radius: 4px; font-size: 13px;"><b>📌 常见选择：</b><ul style="margin: 8px 0 0 16px;"><li><b>Claude Code</b> 适合 Anthropic 兼容工作流</li><li><b>Codex</b> 适合 OpenAI/Codex CLI 工作流</li><li><b>Gemini CLI</b> 适合 Gemini 兼容工作流</li><li><b>OpenCode</b> 适合通过 opencode.json 管理 provider 的场景</li></ul></div><p style="margin-top: 12px;">如果客户端区分操作系统，请在复制前先切到正确的系统标签。</p></div>'
+      },
+      copyConfig: {
+        title: '📋 复制现成配置',
+        description:
+          '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;">复制这里生成的片段，然后粘贴到您的终端或配置文件中。</p><div style="padding: 8px 12px; background: #fef3c7; border-left: 3px solid #f59e0b; border-radius: 4px; font-size: 13px; margin-bottom: 12px;"><b>⚠️ 提醒：</b><ul style="margin: 8px 0 0 16px;"><li>环境变量方式通常只对当前终端会话生效，除非您另行保存</li><li>配置文件片段更适合长期使用</li><li>如果之后轮换了密钥，重新打开这里复制新的值即可</li></ul></div><p style="margin-top: 12px;">大多数情况下，先复制第一段配置就可以开始使用。</p></div>'
+      },
+      complete: {
+        title: '🚀 现在可以开始调用了',
+        description:
+          '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;">到这里，用户侧完整流程已经走通：创建密钥、打开使用说明、复制客户端配置。</p><div style="padding: 8px 12px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 4px; font-size: 13px; margin-bottom: 12px;"><b>✅ 下一步：</b><ul style="margin: 8px 0 0 16px;"><li>把配置粘贴到本地客户端</li><li>发送一次测试请求</li><li>回到用量页面确认是否产生了消费记录</li></ul></div><p style="font-size: 13px; color: #6b7280;">之后您也可以随时从右上角用户菜单重新打开这份引导。</p></div>'
       }
     }
   },

@@ -531,14 +531,10 @@ export function useOnboardingTour(options: OnboardingOptions) {
       return
     }
 
-    // 简易模式下禁用新手引导
-    if (userStore.isSimpleMode) {
-      return
-    }
-
-    // 只在管理员+标准模式下自动启动
     const isAdmin = userStore.user?.role === 'admin'
-    if (!isAdmin) {
+    const shouldAutoStart = isAdmin ? !userStore.isSimpleMode : true
+
+    if (!shouldAutoStart) {
       return
     }
 

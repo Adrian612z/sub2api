@@ -314,6 +314,7 @@
               <!-- Use Key Button -->
               <button
                 @click="openUseKeyModal(row)"
+                data-tour="key-use-btn"
                 class="flex flex-col items-center gap-0.5 rounded-lg p-1.5 text-gray-500 transition-colors hover:bg-green-50 hover:text-green-600 dark:hover:bg-green-900/20 dark:hover:text-green-400"
               >
                 <Icon name="terminal" size="sm" />
@@ -1555,6 +1556,8 @@ const handleSubmit = async () => {
         rate_limit_7d: rateLimitData.rate_limit_7d,
       })
       appStore.showSuccess(t('keys.keyUpdatedSuccess'))
+      closeModals()
+      await loadApiKeys()
     } else {
       const customKey = formData.value.use_custom_key ? formData.value.custom_key : undefined
       await keysAPI.create(
@@ -1568,13 +1571,15 @@ const handleSubmit = async () => {
         rateLimitData
       )
       appStore.showSuccess(t('keys.keyCreatedSuccess'))
-      // Only advance tour if active, on submit step, and creation succeeded
-      if (onboardingStore.isCurrentStep('[data-tour="key-form-submit"]')) {
-        onboardingStore.nextStep(500)
+      const shouldAdvanceTour = onboardingStore.isCurrentStep('[data-tour="key-form-submit"]')
+      closeModals()
+      await loadApiKeys()
+
+      // Wait for the freshly created key row to render before moving into usage steps.
+      if (shouldAdvanceTour) {
+        await onboardingStore.nextStep(300)
       }
     }
-    closeModals()
-    loadApiKeys()
   } catch (error: any) {
     const errorMsg = error.response?.data?.detail || t('keys.failedToSave')
     appStore.showError(errorMsg)

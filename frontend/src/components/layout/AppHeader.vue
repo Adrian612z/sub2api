@@ -233,9 +233,9 @@ const dropdownRef = ref<HTMLElement | null>(null)
 const contactInfo = computed(() => appStore.contactInfo)
 const docUrl = computed(() => appStore.docUrl)
 
-// 只在标准模式的管理员下显示新手引导按钮
+// 登录用户都可以重新打开与自己角色对应的引导
 const showOnboardingButton = computed(() => {
-  return !authStore.isSimpleMode && user.value?.role === 'admin'
+  return !!user.value
 })
 
 const userInitials = computed(() => {

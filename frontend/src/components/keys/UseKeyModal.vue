@@ -5,7 +5,7 @@
     width="wide"
     @close="emit('close')"
   >
-    <div class="space-y-4">
+    <div class="space-y-4" data-tour="use-key-modal">
       <!-- No Group Assigned Warning -->
       <div v-if="!platform" class="flex items-start gap-3 p-4 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800">
         <svg class="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
@@ -29,7 +29,11 @@
         </p>
 
         <!-- Client Tabs -->
-        <div v-if="clientTabs.length" class="border-b border-gray-200 dark:border-dark-700">
+        <div
+          v-if="clientTabs.length"
+          class="border-b border-gray-200 dark:border-dark-700"
+          data-tour="use-key-client-tabs"
+        >
           <nav class="-mb-px flex space-x-6" aria-label="Client">
             <button
               v-for="tab in clientTabs"
@@ -90,6 +94,7 @@
                 <span class="text-xs text-gray-400 font-mono">{{ file.path }}</span>
                 <button
                   @click="copyContent(file.content, index)"
+                  :data-tour="index === 0 ? 'use-key-copy' : undefined"
                   class="flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-lg transition-colors"
                   :class="copiedIndex === index
                     ? 'bg-green-500/20 text-green-400'

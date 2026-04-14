@@ -305,5 +305,52 @@ export const getUserSteps = (t: (key: string) => string): DriveStep[] => [
       align: 'center',
       showButtons: ['close']
     }
+  },
+  {
+    element: '[data-tour="key-use-btn"]',
+    popover: {
+      title: t('onboarding.user.useKey.title'),
+      description: t('onboarding.user.useKey.description'),
+      side: 'left',
+      align: 'center',
+      showButtons: ['close']
+    }
+  },
+  {
+    element: '[data-tour="use-key-modal"]',
+    popover: {
+      title: t('onboarding.user.modal.title'),
+      description: t('onboarding.user.modal.description'),
+      side: 'top',
+      align: 'start',
+      showButtons: ['next', 'previous']
+    }
+  },
+  {
+    element: '[data-tour="use-key-client-tabs"]',
+    popover: {
+      title: t('onboarding.user.clientTabs.title'),
+      description: t('onboarding.user.clientTabs.description'),
+      side: 'bottom',
+      align: 'start',
+      showButtons: ['next', 'previous']
+    }
+  },
+  {
+    element: '[data-tour="use-key-copy"]',
+    popover: {
+      title: t('onboarding.user.copyConfig.title'),
+      description: t('onboarding.user.copyConfig.description'),
+      side: 'left',
+      align: 'center',
+      showButtons: ['next', 'previous']
+    }
+  },
+  {
+    popover: {
+      title: t('onboarding.user.complete.title'),
+      description: t('onboarding.user.complete.description'),
+      align: 'center'
+    }
   }
 ]

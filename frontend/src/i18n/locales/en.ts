@@ -5196,6 +5196,26 @@ export default {
       keySubmit: {
         title: '🎉 Complete Creation',
         description: '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;">Click to confirm and create your API key.</p><div style="padding: 8px 12px; background: #fee2e2; border-left: 3px solid #ef4444; border-radius: 4px; font-size: 13px; margin-bottom: 12px;"><b>⚠️ Important:</b><ul style="margin: 8px 0 0 16px;"><li>Copy the key (sk-xxx) immediately after creation</li><li>Key is only shown once, need to regenerate if lost</li></ul></div><p style="padding: 8px 12px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 4px; font-size: 13px;"><b>🚀 How to Use:</b><br/>Configure the key in any OpenAI-compatible client (like ChatBox, OpenCat, etc.) and start using!</p><p style="margin-top: 12px; color: #10b981; font-weight: 600;">👉 Click "Create" button</p></div>'
+      },
+      useKey: {
+        title: '🧭 Open Usage Guide',
+        description: '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;"><b>Your key is ready.</b> Each row includes a quick setup entry for real clients.</p><div style="padding: 8px 12px; background: #eff6ff; border-left: 3px solid #3b82f6; border-radius: 4px; font-size: 13px; margin-bottom: 12px;"><b>📌 What this does:</b><ul style="margin: 8px 0 0 16px;"><li>Shows the correct base URL automatically</li><li>Injects your newly created API key into the snippet</li><li>Lets you switch between Claude Code, Codex, Gemini CLI, and OpenCode when available</li></ul></div><p style="margin-top: 12px; color: #10b981; font-weight: 600;">👉 Click the "Use Key" button on this row</p></div>'
+      },
+      modal: {
+        title: '🪟 Client Setup Window',
+        description: '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;">This window generates ready-to-use configuration for your client.</p><div style="padding: 8px 12px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 4px; font-size: 13px;"><b>💡 You do not need to manually assemble the endpoint, key, or provider format.</b> Sub2API has already filled them in for you.</div></div>'
+      },
+      clientTabs: {
+        title: '🧩 Match Your Client',
+        description: '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;">Choose the tab that matches the tool you actually use.</p><div style="padding: 8px 12px; background: #eff6ff; border-left: 3px solid #3b82f6; border-radius: 4px; font-size: 13px;"><b>📌 Common choices:</b><ul style="margin: 8px 0 0 16px;"><li><b>Claude Code</b> for Anthropic-compatible workflows</li><li><b>Codex</b> for OpenAI/Codex CLI workflows</li><li><b>Gemini CLI</b> for Gemini-compatible workflows</li><li><b>OpenCode</b> if you manage providers through opencode.json</li></ul></div><p style="margin-top: 12px;">If your client supports multiple systems, switch to the correct OS tab before copying.</p></div>'
+      },
+      copyConfig: {
+        title: '📋 Copy the Ready-Made Config',
+        description: '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;">Copy the generated snippet and paste it into your terminal or configuration file.</p><div style="padding: 8px 12px; background: #fef3c7; border-left: 3px solid #f59e0b; border-radius: 4px; font-size: 13px; margin-bottom: 12px;"><b>⚠️ Reminder:</b><ul style="margin: 8px 0 0 16px;"><li>Environment variables only affect the current terminal session unless you save them</li><li>Config file snippets are better for persistent setup</li><li>If you rotate the key later, reopen this dialog and copy the new value</li></ul></div><p style="margin-top: 12px;">The first code block is usually enough to get started.</p></div>'
+      },
+      complete: {
+        title: '🚀 You Can Start Calling Now',
+        description: '<div style="line-height: 1.7;"><p style="margin-bottom: 12px;">At this point you have completed the full user path: create a key, open the usage guide, and copy the client configuration.</p><div style="padding: 8px 12px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 4px; font-size: 13px; margin-bottom: 12px;"><b>✅ Next:</b><ul style="margin: 8px 0 0 16px;"><li>Paste the snippet into your local client</li><li>Send a test request</li><li>Return to the usage page to confirm consumption records</li></ul></div><p style="font-size: 13px; color: #6b7280;">You can reopen this onboarding guide anytime from the user menu in the top right corner.</p></div>'
       }
     }
   },
