@@ -38,7 +38,7 @@ Production deployment config lives in the separate private repository `Adrian612
 Use a pinned image such as:
 
 ```text
-ghcr.io/adrian612z/sub2api:v0.1.111-athena.1
+ghcr.io/adrian612z/sub2api:0.1.111-athena.1
 ```
 
 Do not deploy `weishaw/sub2api:latest` directly in production.
