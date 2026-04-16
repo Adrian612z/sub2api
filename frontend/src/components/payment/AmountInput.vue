@@ -30,7 +30,7 @@
       </label>
       <div class="relative">
         <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-dark-500">
-          $
+          {{ currencySymbol }}
         </span>
         <input
           type="text"
@@ -67,6 +67,7 @@ const emit = defineEmits<{
 const { t } = useI18n()
 
 const customText = ref('')
+const currencySymbol = '￥'
 
 // 0 = no limit
 const filteredAmounts = computed(() =>
