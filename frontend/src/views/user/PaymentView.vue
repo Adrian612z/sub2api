@@ -45,7 +45,17 @@
             <div class="card p-5">
               <p class="text-xs font-medium text-gray-400 dark:text-gray-500">{{ t('payment.rechargeAccount') }}</p>
               <p class="mt-1 text-base font-semibold text-gray-900 dark:text-white">{{ user?.username || '' }}</p>
-              <p class="mt-0.5 text-sm font-medium text-green-600 dark:text-green-400">{{ t('payment.currentBalance') }}: {{ user?.balance?.toFixed(2) || '0.00' }}</p>
+              <p class="mt-0.5 text-sm font-medium text-green-600 dark:text-green-400">{{ t('payment.currentBalance') }}: {{ currentBalanceDisplay }} {{ t('payment.balanceUnit') }}</p>
+              <div class="mt-4 rounded-xl border border-primary-100 bg-primary-50/70 p-4 text-sm text-primary-700 dark:border-primary-900/40 dark:bg-primary-900/10 dark:text-primary-200">
+                <p class="font-medium">{{ t('payment.balanceGuideTitle') }}</p>
+                <div class="mt-2 space-y-1.5 text-sm">
+                  <p>{{ t('payment.balanceRuleRecharge') }}</p>
+                  <p>{{ t('payment.balanceRuleQuota') }}</p>
+                  <p>{{ t('payment.balanceRuleCurrent', { balance: currentBalanceDisplay, quota: currentBalanceDisplay }) }}</p>
+                  <p v-if="validAmount > 0">{{ t('payment.balanceRuleEntered', { amount: enteredAmountDisplay, balance: enteredAmountDisplay, quota: enteredAmountDisplay }) }}</p>
+                  <p v-else>{{ t('payment.balanceRuleExample') }}</p>
+                </div>
+              </div>
             </div>
             <div v-if="enabledMethods.length === 0" class="card py-16 text-center">
               <p class="text-gray-500 dark:text-gray-400">{{ t('payment.notAvailable') }}</p>
@@ -354,6 +364,8 @@ const tabs = computed(() => {
 
 const enabledMethods = computed(() => Object.keys(checkout.value.methods))
 const validAmount = computed(() => amount.value ?? 0)
+const currentBalanceDisplay = computed(() => Number(user.value?.balance ?? 0).toFixed(2))
+const enteredAmountDisplay = computed(() => validAmount.value.toFixed(2))
 
 // Adaptive grid: center single card, 2-col for 2 plans, 3-col for 3+
 const planGridClass = computed(() => {

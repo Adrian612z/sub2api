@@ -11,8 +11,8 @@ export default {
     getStarted: '立即开始',
     goToDashboard: '进入控制台',
     // 新增：面向用户的价值主张
-    heroSubtitle: '一个密钥，畅用多个 AI 模型',
-    heroDescription: '无需管理多个订阅账号，一站式接入 Claude、GPT、Gemini 等主流 AI 服务',
+    heroSubtitle: '一个密钥，直接使用 GPT 官方额度',
+    heroDescription: '现阶段先专注做好 GPT / OpenAI 官方额度体验，充值、余额和使用关系更清晰。',
     tags: {
       subscriptionToApi: '订阅转 API',
       stickySession: '会话保持',
@@ -47,7 +47,7 @@ export default {
     },
     features: {
       unifiedGateway: '一键接入',
-      unifiedGatewayDesc: '获取一个 API 密钥，即可调用所有已接入的 AI 模型，无需分别申请。',
+      unifiedGatewayDesc: '获取一个 API 密钥，即可直接使用 GPT 官方额度，无需分别管理多个订阅入口。',
       multiAccount: '稳定可靠',
       multiAccountDesc: '智能调度多个上游账号，自动切换和负载均衡，告别频繁报错。',
       balanceQuota: '用多少付多少',
@@ -70,7 +70,7 @@ export default {
         models: {
           feature: '模型选择',
           official: '单一服务商',
-          us: '多模型随意切换'
+          us: '专注 GPT，体验更清晰'
         },
         management: {
           feature: '账号管理',
@@ -90,8 +90,8 @@ export default {
       }
     },
     providers: {
-      title: '已支持的 AI 模型',
-      description: '一个 API，多种选择',
+      title: '当前支持',
+      description: '现阶段仅开放 GPT / OpenAI 官方额度',
       supported: '已支持',
       soon: '即将推出',
       claude: 'Claude',
@@ -330,6 +330,7 @@ export default {
   // Navigation
   nav: {
     dashboard: '仪表盘',
+    modelPlaza: '模型广场',
     announcements: '公告',
     apiKeys: 'API 密钥',
     usage: '使用记录',
@@ -360,6 +361,22 @@ export default {
     paymentDashboard: '支付概览',
     paymentConfig: '支付配置',
     paymentPlans: '订阅套餐'
+  },
+
+  modelPlaza: {
+    title: '模型广场',
+    description: '查看当前支持的模型与价格参考',
+    badge: '价格参考',
+    heading: '当前支持的模型与价格',
+    intro: '这里展示 AthenaAPI 当前支持的 GPT 模型，以及按当前平台价格映射整理后的参考价格。单位统一为美元 / 1M Tokens。',
+    priceNoteTitle: '价格说明',
+    priceNoteBody: '页面价格优先参考当前平台计费价格映射；个别模型名称如 gpt-5.3 会按当前系统映射规则展示。',
+    inputPrice: '输入价格',
+    outputPrice: '补全价格',
+    cacheReadPrice: '缓存读取价格',
+    billingTag: '按量计费',
+    gpt53Note: 'gpt-5.3 当前按平台映射价格展示，用于保持页面展示与系统计费口径一致。',
+    gpt53CodexNote: 'gpt-5.3-codex 当前按系统映射到 gpt-5.2-codex 档位价格展示。',
   },
 
   // Auth
@@ -5488,6 +5505,13 @@ export default {
       backToRecharge: '返回充值',
       viewOrders: '查看订单',
     },
+    balanceGuideTitle: '余额说明',
+    balanceUnit: '余额',
+    balanceRuleRecharge: '充值 1 元 = 1 余额',
+    balanceRuleQuota: '1 余额 = $1 官方额度',
+    balanceRuleCurrent: '当前余额 {balance}，可用 ${quota} 官方额度',
+    balanceRuleEntered: '当前输入 ¥{amount}，将获得 {balance} 余额，可用 ${quota} 官方额度',
+    balanceRuleExample: '例如：充值 ¥100 = 100 余额，可用 $100 官方额度',
     currentBalance: '当前余额',
     rechargeAccount: '充值账户',
     activeSubscription: '当前订阅',

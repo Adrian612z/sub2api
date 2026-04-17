@@ -264,6 +264,21 @@ const ChartIcon = {
     )
 }
 
+const ModelPlazaIcon = {
+  render: () =>
+    h(
+      'svg',
+      { fill: 'none', viewBox: '0 0 24 24', stroke: 'currentColor', 'stroke-width': '1.5' },
+      [
+        h('path', {
+          'stroke-linecap': 'round',
+          'stroke-linejoin': 'round',
+          d: 'M3.75 7.5 12 3l8.25 4.5M3.75 7.5V16.5L12 21m-8.25-13.5L12 12m0 9V12m0 0 8.25-4.5m-8.25 4.5 8.25 4.5V7.5'
+        })
+      ]
+    )
+}
+
 const GiftIcon = {
   render: () =>
     h(
@@ -568,6 +583,7 @@ const ChevronDownIcon = {
 const userNavItems = computed((): NavItem[] => {
   const items: NavItem[] = [
     { path: '/dashboard', label: t('nav.dashboard'), icon: DashboardIcon },
+    { path: '/models', label: t('nav.modelPlaza'), icon: ModelPlazaIcon },
     { path: '/keys', label: t('nav.apiKeys'), icon: KeyIcon },
     { path: '/usage', label: t('nav.usage'), icon: ChartIcon, hideInSimpleMode: true },
     { path: '/subscriptions', label: t('nav.mySubscriptions'), icon: CreditCardIcon, hideInSimpleMode: true },
@@ -606,6 +622,7 @@ const userNavItems = computed((): NavItem[] => {
 // Personal navigation items (for admin's "My Account" section, without Dashboard)
 const personalNavItems = computed((): NavItem[] => {
   const items: NavItem[] = [
+    { path: '/models', label: t('nav.modelPlaza'), icon: ModelPlazaIcon },
     { path: '/keys', label: t('nav.apiKeys'), icon: KeyIcon },
     { path: '/usage', label: t('nav.usage'), icon: ChartIcon, hideInSimpleMode: true },
     { path: '/subscriptions', label: t('nav.mySubscriptions'), icon: CreditCardIcon, hideInSimpleMode: true },

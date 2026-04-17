@@ -11,8 +11,8 @@ export default {
     getStarted: 'Get Started',
     goToDashboard: 'Go to Dashboard',
     // User-focused value proposition
-    heroSubtitle: 'One Key, All AI Models',
-    heroDescription: 'No need to manage multiple subscriptions. Access Claude, GPT, Gemini and more with a single API key',
+    heroSubtitle: 'One Key, Direct Access to GPT Credits',
+    heroDescription: 'For now, we focus on GPT / OpenAI official credits so recharge, balance, and usage stay easy to understand.',
     tags: {
       subscriptionToApi: 'Subscription to API',
       stickySession: 'Session Persistence',
@@ -47,7 +47,7 @@ export default {
     },
     features: {
       unifiedGateway: 'One-Click Access',
-      unifiedGatewayDesc: 'Get a single API key to call all connected AI models. No separate applications needed.',
+      unifiedGatewayDesc: 'Get a single API key and use GPT official credits directly, without juggling multiple subscription entry points.',
       multiAccount: 'Always Reliable',
       multiAccountDesc: 'Smart routing across multiple upstream accounts with automatic failover. Say goodbye to errors.',
       balanceQuota: 'Pay What You Use',
@@ -70,7 +70,7 @@ export default {
         models: {
           feature: 'Model Selection',
           official: 'Single provider only',
-          us: 'Switch between models freely'
+          us: 'Focused on GPT with a clearer experience'
         },
         management: {
           feature: 'Account Management',
@@ -90,8 +90,8 @@ export default {
       }
     },
     providers: {
-      title: 'Supported AI Models',
-      description: 'One API, Multiple Choices',
+      title: 'Currently Supported',
+      description: 'At this stage, only GPT / OpenAI official credits are available',
       supported: 'Supported',
       soon: 'Soon',
       claude: 'Claude',
@@ -330,6 +330,7 @@ export default {
   // Navigation
   nav: {
     dashboard: 'Dashboard',
+    modelPlaza: 'Model Plaza',
     announcements: 'Announcements',
     apiKeys: 'API Keys',
     usage: 'Usage',
@@ -360,6 +361,22 @@ export default {
     paymentDashboard: 'Payment Dashboard',
     paymentConfig: 'Payment Config',
     paymentPlans: 'Plans'
+  },
+
+  modelPlaza: {
+    title: 'Model Plaza',
+    description: 'Browse currently supported models and price references',
+    badge: 'Price Reference',
+    heading: 'Supported Models and Reference Pricing',
+    intro: 'This page lists the GPT models currently supported by AthenaAPI, together with reference prices based on the platform pricing mapping. All prices are shown in USD per 1M tokens.',
+    priceNoteTitle: 'Pricing Note',
+    priceNoteBody: 'Displayed prices follow the current platform pricing mapping first. Some model labels such as gpt-5.3 are shown according to the system mapping rules.',
+    inputPrice: 'Input Price',
+    outputPrice: 'Output Price',
+    cacheReadPrice: 'Cache Read Price',
+    billingTag: 'Token Billing',
+    gpt53Note: 'gpt-5.3 is currently displayed using the platform-mapped pricing so the page stays aligned with the actual billing path.',
+    gpt53CodexNote: 'gpt-5.3-codex is currently shown using the mapped gpt-5.2-codex pricing tier.',
   },
 
   // Auth
@@ -5295,6 +5312,13 @@ export default {
       backToRecharge: 'Back to Recharge',
       viewOrders: 'View Orders',
     },
+    balanceGuideTitle: 'Balance Guide',
+    balanceUnit: 'credits',
+    balanceRuleRecharge: 'Recharge ¥1 = 1 credit',
+    balanceRuleQuota: '1 credit = $1 official quota',
+    balanceRuleCurrent: 'Your current balance is {balance}, which equals ${quota} official quota',
+    balanceRuleEntered: 'With the current input of ¥{amount}, you will get {balance} credits = ${quota} official quota',
+    balanceRuleExample: 'For example: recharge ¥100 = 100 credits = $100 official quota',
     currentBalance: 'Current Balance',
     rechargeAccount: 'Recharge Account',
     activeSubscription: 'Active Subscription',
