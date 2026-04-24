@@ -76,6 +76,42 @@ const { t } = useI18n()
 
 const models = computed<ModelCard[]>(() => [
   {
+    id: 'gpt-5.5',
+    inputPrice: 5,
+    outputPrice: 30,
+    cacheReadPrice: 0.5,
+  },
+  {
+    id: 'gpt-5.4',
+    inputPrice: 2.5,
+    outputPrice: 15,
+    cacheReadPrice: 0.25,
+  },
+  {
+    id: 'gpt-5.3',
+    inputPrice: 1.75,
+    outputPrice: 14,
+    cacheReadPrice: 0.175,
+  },
+  {
+    id: 'gpt-5.3-codex',
+    inputPrice: 1.75,
+    outputPrice: 14,
+    cacheReadPrice: 0.175,
+  },
+  {
+    id: 'gpt-5.2',
+    inputPrice: 1.75,
+    outputPrice: 14,
+    cacheReadPrice: 0.175,
+  },
+  {
+    id: 'gpt-5.2-codex',
+    inputPrice: 1.75,
+    outputPrice: 14,
+    cacheReadPrice: 0.175,
+  },
+  {
     id: 'gpt-5.1',
     inputPrice: 1.25,
     outputPrice: 10,
@@ -98,36 +134,6 @@ const models = computed<ModelCard[]>(() => [
     inputPrice: 0.25,
     outputPrice: 2,
     cacheReadPrice: 0.025,
-  },
-  {
-    id: 'gpt-5.2',
-    inputPrice: 1.75,
-    outputPrice: 14,
-    cacheReadPrice: 0.175,
-  },
-  {
-    id: 'gpt-5.2-codex',
-    inputPrice: 1.75,
-    outputPrice: 14,
-    cacheReadPrice: 0.175,
-  },
-  {
-    id: 'gpt-5.3',
-    inputPrice: 1.75,
-    outputPrice: 14,
-    cacheReadPrice: 0.175,
-  },
-  {
-    id: 'gpt-5.3-codex',
-    inputPrice: 1.75,
-    outputPrice: 14,
-    cacheReadPrice: 0.175,
-  },
-  {
-    id: 'gpt-5.4',
-    inputPrice: 2.5,
-    outputPrice: 15,
-    cacheReadPrice: 0.25,
   },
 ])
 
